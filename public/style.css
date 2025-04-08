@@ -1,0 +1,322 @@
+/* Modern sleek design - Base styles */
+:root {
+  --primary: #3a6df0;
+  --primary-light: #4a7bff;
+  --primary-dark: #2d56c2;
+  --accent: #ff4757;
+  --text: #262626;
+  --text-light: #636e72;
+  --bg-main: #f5f7fb;
+  --bg-card: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.06);
+  --transition: all 0.25s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
+  padding: 24px;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: var(--bg-main);
+  color: var(--text);
+  font-size: 16px;
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  color: var(--primary);
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: -0.3px;
+}
+
+/* Form styling */
+form {
+  margin-bottom: 28px;
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+form:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07), 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+input[list], input[type="text"], input[type="number"] { /* Added input[type="number"] */
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e5ee;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #f7f9fc;
+}
+
+input[list]:focus, input[type="text"]:focus, input[type="number"]:focus { /* Added input[type="number"]:focus */
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(58, 109, 240, 0.2);
+  background-color: #fff;
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(58, 109, 240, 0.3);
+  margin-top: 10px; /* Added margin-top */
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(58, 109, 240, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #e0e0e0;
+  box-shadow: none;
+  cursor: not-allowed;
+  color: #a0a0a0;
+}
+
+/* Results area */
+#storyResult {
+  margin-top: 28px;
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  min-height: 60px;
+  transition: var(--transition);
+}
+
+#storyResult:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.07), 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* Individual tweet styling */
+.tweet {
+  border: 1px solid #eaeff5;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background-color: #fafbfd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  transition: var(--transition);
+}
+
+.tweet:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.tweet-content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Disclaimer styling */
+.disclaimer {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 24px;
+  font-style: italic;
+  text-align: center;
+  border-top: 1px solid #eaeff5;
+  padding-top: 18px;
+}
+
+/* Error message styling */
+.error {
+  color: var(--accent);
+  font-weight: 500;
+  background-color: rgba(255, 71, 87, 0.1);
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.error:before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+/* Tweet count info styling - Adjusted, might need different HTML structure */
+#dramaForm > div:nth-of-type(2) { /* Targeting the div containing the tweet count */
+  margin-bottom: 20px;
+}
+
+#dramaForm label[for="tweetCount"] {
+  /* Keep default label style */
+  margin-bottom: 4px;
+}
+
+/* Modern Loading Spinner */
+#loading {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#loading p {
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 3px solid rgba(58, 109, 240, 0.2);
+  border-radius: 50%;
+  border-left-color: var(--primary);
+  animation: spin 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Theme Tile Selection */
+#themeCheckboxes.theme-grid { /* Added ID for specificity */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px; /* Adjusted padding */
+  border: 2px solid #eaeff5;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: var(--bg-card);
+  transition: var(--transition);
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  min-height: 50px; /* Ensured minimum height */
+  line-height: 1.3; /* Adjusted line-height */
+}
+
+.theme-tile:hover {
+  border-color: var(--primary-light);
+  background-color: #f0f5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(58, 109, 240, 0.15);
+}
+
+.theme-tile:active {
+  transform: scale(0.98);
+}
+
+/* Style for the selected tile */
+.hidden-checkbox:checked + .theme-tile {
+  background: linear-gradient(135deg, #e6f0ff, #f0f7ff);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(58, 109, 240, 0.2);
+}
+
+/* Checkbox warning */
+#checkboxWarning {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 15px;
+    display: block; /* Ensure it takes space even when hidden via script */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+    margin: 1rem auto; /* Reduced margin on small screens */
+  }
+
+  form, #storyResult {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #themeCheckboxes.theme-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+  }
+
+  .theme-tile {
+    padding: 12px 8px;
+    min-height: 45px;
+    font-size: 0.85rem;
+  }
+}

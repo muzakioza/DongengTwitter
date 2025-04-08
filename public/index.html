@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Drama Twitter Fiksi (Aman)</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🎭 Generator Drama Twitter Fiksi (Aman) 🎭</h1>
+    <p style="text-align: center;">Pilih maksimal 3 tema, dan biarkan AI merangkai cerita fiksi ala Twitter!</p>
+
+    <!-- Form for user input -->
+    <form id="dramaForm">
+        <label>Pilih Tema Drama (Maksimal 3):</label>
+        <div id="themeCheckboxes" class="theme-grid">
+            <!-- Use labels styled as tiles, linked to hidden checkboxes -->
+            <input type="checkbox" id="tema1" name="theme" value="Judi Online" class="hidden-checkbox">
+            <label for="tema1" class="theme-tile">Judi Online</label>
+
+            <input type="checkbox" id="tema2" name="theme" value="Selingkuh" class="hidden-checkbox">
+            <label for="tema2" class="theme-tile">Selingkuh</label>
+
+            <input type="checkbox" id="tema3" name="theme" value="Kemiskinan" class="hidden-checkbox">
+            <label for="tema3" class="theme-tile">Kemiskinan</label>
+
+            <input type="checkbox" id="tema4" name="theme" value="Masalah Keluarga" class="hidden-checkbox">
+            <label for="tema4" class="theme-tile">Masalah Keluarga</label>
+
+            <input type="checkbox" id="tema5" name="theme" value="Pernikahan Bermasalah" class="hidden-checkbox">
+            <label for="tema5" class="theme-tile">Pernikahan Bermasalah</label>
+
+            <input type="checkbox" id="tema6" name="theme" value="Mabuk" class="hidden-checkbox">
+            <label for="tema6" class="theme-tile">Mabuk</label>
+
+            <input type="checkbox" id="tema7" name="theme" value="Mertua" class="hidden-checkbox">
+            <label for="tema7" class="theme-tile">Mertua</label>
+
+            <input type="checkbox" id="tema8" name="theme" value="Mantan Pacar" class="hidden-checkbox">
+            <label for="tema8" class="theme-tile">Mantan Pacar</label>
+
+            <input type="checkbox" id="tema9" name="theme" value="Utang Piutang" class="hidden-checkbox">
+            <label for="tema9" class="theme-tile">Utang Piutang</label>
+
+            <input type="checkbox" id="tema10" name="theme" value="Tetangga Julid" class="hidden-checkbox">
+            <label for="tema10" class="theme-tile">Tetangga Julid</label>
+
+            <input type="checkbox" id="tema11" name="theme" value="Generasi Sandwich" class="hidden-checkbox">
+            <label for="tema11" class="theme-tile">Generasi Sandwich</label>
+
+            <input type="checkbox" id="tema12" name="theme" value="Pinjaman Online" class="hidden-checkbox">
+            <label for="tema12" class="theme-tile">Pinjaman Online</label>
+
+            <input type="checkbox" id="tema13" name="theme" value="Ketipu" class="hidden-checkbox">
+            <label for="tema13" class="theme-tile">Ketipu</label>
+
+            <input type="checkbox" id="tema14" name="theme" value="Pacar" class="hidden-checkbox">
+            <label for="tema14" class="theme-tile">Pacar</label>
+
+            <input type="checkbox" id="tema15" name="theme" value="Warisan" class="hidden-checkbox">
+            <label for="tema15" class="theme-tile">Warisan</label>
+
+            <input type="checkbox" id="tema16" name="theme" value="Sirkel Toxic" class="hidden-checkbox">
+            <label for="tema16" class="theme-tile">Sirkel Toxic</label>
+        </div>
+        <small id="checkboxWarning" style="color: red; display: none;">Hanya bisa memilih maksimal 3 tema.</small>
+
+        <!-- Add input for number of tweets -->
+        <div>
+            <label for="tweetCount">Jumlah Tweet (3-10):</label>
+            <input type="number" id="tweetCount" name="tweetCount" min="3" max="10" value="10" required>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" id="generateBtn">Buat Cerita Drama!</button>
+    </form>
+
+    <!-- Loading indicator (hidden by default) -->
+    <div id="loading" style="display: none; text-align: center; margin-top: 20px;">
+        <p><em>Sedang membuat cerita... Mohon tunggu...</em></p>
+        <div class="spinner"></div> <!-- Optional spinner CSS -->
+    </div>
+
+    <!-- Area where results will be displayed -->
+    <div id="storyResult">
+        <!-- Results will be injected here by JavaScript -->
+    </div>
+
+    <!-- Link to the JavaScript file (usually placed at the end of body) -->
+    <script src="script.js"></script>
+</body>
+</html>
